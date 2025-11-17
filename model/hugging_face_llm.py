@@ -7,6 +7,7 @@ class HuggingFaceLLM:
         "llama-2-7b": "./checkpoint/Llama-2-7b-chat-hf",
         "llama-2-13b": "./checkpoint/Llama-2-13b-chat-hf",
         "mistral-7b-v0.2": "./checkpoint/Mistral-7B-Instruct-v0.2",
+        "TinyLlama-1.1B": "./checkpoint/TinyLlama-1.1B-Chat-v1.0"
     }
 
     def __init__(self, model_name="llama-2-7b", device="cuda") -> None:
