@@ -49,6 +49,12 @@ dataset = dataset["train"].train_test_split(test_size=0.2)
 dataset["validation"] = dataset["test"]
 del dataset["test"]
 
+# # for test
+# train_size = len(dataset['train']) // 3
+# val_size = len(dataset['validation']) // 3
+# dataset["train"] = dataset["train"].select(range(train_size))
+# dataset["validation"] = dataset["validation"].select(range(val_size))
+
 dataset = dataset.map(
     lambda x: {"prompt": [prompt_format.format(p) for p in x["prompt"]]},
     batched=True,

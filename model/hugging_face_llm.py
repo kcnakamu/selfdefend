@@ -14,10 +14,6 @@ class HuggingFaceLLM:
         }
     }
 
-    LORA_BASE_MODELS = {
-        "TinyLlama-1.1B-lora-direct-epoch1-bs2-lr0.0002": "TinyLlama-1.1B",
-    }
-
     def __init__(self, model_name="llama-2-7b", device="cuda") -> None:
         self.model_name = model_name
 
